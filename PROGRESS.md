@@ -13,7 +13,8 @@ Decided 23 Nov (Salah; passed on by Thread 0, 23 Nov, 18:45), all six as recomme
 - [x] **Waitlist storage:** stay on Formspree, with a `source` field taken from `?from=`, sent in the background with a plain form post as the fallback. Built 23 Nov.
 - [x] **Page language stored with each sign-up** (`lang`, taken from the page and never asked). Built 23 Nov.
 - [x] **Hosting:** stay on GitHub Pages through launch, with the security policy in a meta tag. Built 23 Nov.
-- [x] **Wordmark:** keep the uppercase CLEAN(ish) logo, **on condition that it matches the app's own wordmark and icon exactly and is tidy.** Still to check against docs/reference in the app repository; files requested from Thread 0 on 23 Nov.
+- [x] **Wordmark:** keep the uppercase CLEAN(ish) logo, **on condition that it matches the app's own wordmark and icon exactly and is tidy.** Checked on 23 Nov against the spec Thread 0 read from the app (DESIGN.md, design-tokens.json, Wordmark.tsx on branch dash). The wordmark now matches: Inter 800, letter-spacing 0 (was 0.005em on CLEAN), line-height 1, "(ish)" 2% left margin, ink #151515 / #F2EEF0, berry #B05A7A / #D98AA8.
+  - Still to do: the icon, favicon, Apple touch icon and social preview image are drawn by the site itself, and favicon.svg uses Helvetica, not Inter. They will be replaced with the app's own files (assets/icon.png, assets/favicon.png, assets/splash/wordmark-*.png on branch dash) once the app repository is attached.
 - [x] **Impressum** carries the managing director's name (one exception to the "no real people" rule). Waits for Legal's text.
 - [x] **First small technical merge now,** ahead of the full plain version. Built on the branch 23 Nov; goes to `main` once Salah has seen it.
 - [ ] **Plain and reveal plan, with the two switches (step 2).** Proposal to follow.
