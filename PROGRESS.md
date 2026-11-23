@@ -30,7 +30,8 @@ Decided 23 Nov (Salah; passed on by Thread 0, 23 Nov, 19:55):
   Ready and reviewed by about 10 Dec.
 - [ ] **Step 2 plan:** proposed 23 Nov in the Clean(ish) Website Plan, with six decisions for Salah at the end.
   - [x] Waitlist (Salah, 23 Nov, passed on by Thread 0, 20:10): the waitlist email goes out on release day, the day the stores approve; the form's promise stays as it is; on release day the form gives way to the store buttons.
-  - [ ] The other five: still with Salah.
+  - [x] Private repository (Salah, 23 Nov, passed on by Thread 0, 20:20): the GitHub Team plan (Salah is finishing it), then cleanish-site goes private, by 30 Nov. No reveal content is pushed until it is private.
+  - [ ] The other four: still with Salah.
 
 ## Salah-only tasks
 
