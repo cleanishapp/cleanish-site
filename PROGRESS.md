@@ -1,6 +1,6 @@
 # Website: open list and hand-over
 
-Kept by Thread Website. Last updated 22 Nov 2026.
+Kept by Thread Website. Last updated 23 Nov 2026.
 
 **Scope (Salah, 22 Nov):** Thread Website owns the build, the technical side, security and design of cleanish.app. Thread Marketing writes the copy. Thread Legal writes privacy, Terms, consumer health data and the Impressum. Thread Support writes the help page. The website is built around their text, and no website copy is written here.
 
@@ -8,19 +8,19 @@ Kept by Thread Website. Last updated 22 Nov 2026.
 
 ## Open for Salah
 
-Each item has a recommendation (Rec) and an alternative (Alt).
+Decided 23 Nov (Salah; passed on by Thread 0, 23 Nov, 18:45), all six as recommended:
 
-- [ ] **Waitlist storage.** Rec: keep Formspree (already named in the privacy notice) and add a `source` field from `?from=`. Submit in the background so visitors never leave our page, with a plain form post as the fallback. Alt: our own small endpoint storing data in the EU (more control, but it needs a server and secrets).
-- [ ] **Store the page language with each sign-up,** so the 1 January email goes out in the right language. Rec: yes, taken from the page and never asked. Alt: email and source only, with one launch email in English.
-- [ ] **Hosting.** Rec: stay on GitHub Pages through launch (domain verified, no new provider). The security policy goes in a meta tag. Alt: Cloudflare Pages, for real security headers (frame protection, HSTS control). That means a new account, a DNS change and a new provider in the privacy policy.
-- [ ] **Wordmark.** Rec: keep the uppercase CLEAN(ish) logo, which matches the filed trademark CLEAN(ISH) and the app icon. Running text always says Clean(ish). Alt: a mixed-case logo.
-- [ ] **Impressum and the "no real people" rule.** German law needs the managing director's name on the Impressum. That name is public at Companies House. Rec: allow this one exception. Alt: no Impressum (not an option if Germany, Austria or Switzerland launch).
-- [ ] **First small merge this week, before the full plain version.** It would add channel-source capture, canonical URLs and meta tags on every page, a sitemap, robots.txt, a branded 404 and fewer font files. Reason: the "waitlist link in bio" posts start 24 Nov, and sign-ups before this is live have no source. Rec: yes. Alt: wait for the full plain version (about 3 Dec).
+- [x] **Waitlist storage:** stay on Formspree, with a `source` field taken from `?from=`, sent in the background with a plain form post as the fallback. Built 23 Nov.
+- [x] **Page language stored with each sign-up** (`lang`, taken from the page and never asked). Built 23 Nov.
+- [x] **Hosting:** stay on GitHub Pages through launch, with the security policy in a meta tag. Built 23 Nov.
+- [x] **Wordmark:** keep the uppercase CLEAN(ish) logo, **on condition that it matches the app's own wordmark and icon exactly and is tidy.** Still to check against docs/reference in the app repository; files requested from Thread 0 on 23 Nov.
+- [x] **Impressum** carries the managing director's name (one exception to the "no real people" rule). Waits for Legal's text.
+- [x] **First small technical merge now,** ahead of the full plain version. Built on the branch 23 Nov; goes to `main` once Salah has seen it.
 - [ ] **Plain and reveal plan, with the two switches (step 2).** Proposal to follow.
 
 ## Salah-only tasks
 
-- [ ] Formspree dashboard: check the plan (custom redirects need a paid plan, as far as I know), whether reCAPTCHA is on, whether IP addresses are stored, and how long submissions are kept.
+- [ ] Formspree dashboard: check the plan, whether reCAPTCHA is on, whether IP addresses are stored, and how long submissions are kept. If the plan offers it, restrict the form to the cleanish.app domain. The new background send no longer needs Formspree's custom redirect.
 - [ ] GitHub, cleanish-site, Settings, Pages: confirm "Enforce HTTPS" is ticked.
 - [ ] Branch protection on `main` of cleanish-site: changes by pull request only, no force-push. This is already on the Admin List for both repositories.
 - [ ] Let this session reach the app repository (cleanishapp/cleanish-app), so Thread Website can file `for-thread-0` issues. Attaching it was refused on 22 Nov.
@@ -46,4 +46,14 @@ Each item has a recommendation (Rec) and an alternative (Alt).
 ## Hand-over
 
 - **22 Nov:** audit done (in the session; summary: wording and scope fixes are now Marketing's and Legal's; missing canonical URLs, meta tags, sitemap, robots.txt, 404 page and `?from=` handling; fonts duplicated four times; no secrets in the history). Nothing built yet. Working branch: `claude/lucid-sagan-520v2e`. Merges to `main` only after Salah has seen the result.
+- **23 Nov:** the technical merge is built on the branch, with no copy changes. It adds:
+  - `source` from `?from=` (lower-case letters, numbers and hyphens, up to 32 characters; kept for the tab only; removed from the address bar) and `lang`
+  - background send to Formspree, falling back to the plain post
+  - a bot trap (hidden field, or a submit within 1.5 s)
+  - a security policy in a meta tag (own scripts, styles, fonts and images only; form and connections to formspree.io only), with `strict-origin` referrers
+  - canonical, og:url, og:type and og:locale on the indexable pages
+  - `sitemap.xml`, `robots.txt` and a branded `404.html`
+  - the fonts cut from 8 files to 2 (one variable font); the inline styles moved into the stylesheet
+
+  19 browser checks pass on an iPhone 13-sized screen. The home page is pixel-identical to before. Meta descriptions for the other pages wait for Marketing's copy.
 - **Next:** step 2 proposal (plain version, reveal version, the two switches), then the first small merge once Salah agrees.
