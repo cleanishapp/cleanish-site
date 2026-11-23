@@ -42,7 +42,7 @@ Decided 23 Nov (Salah; passed on by Thread 0, 23 Nov, 19:55):
 - [ ] Branch protection on `main` of cleanish-site: changes by pull request only, no force-push. This is already on the Admin List for both repositories.
 - [ ] If the plan is agreed: the organisation's Team plan (already on the Admin List), then make cleanish-site private by 30 Nov, and set Pages' source to "GitHub Actions".
 - [ ] Let this session reach the app repository (cleanishapp/cleanish-app), so Thread Website can file `for-thread-0` issues. Attaching it was refused on 22 Nov.
-- [ ] Let this session's network reach cleanish.app, so the live site can be checked. It is blocked today.
+- [x] Let this session's network reach cleanish.app: done 23 Nov (personal environment "cleanish-site", the same as Default plus cleanish.app and www.cleanish.app).
 
 ## Docs and inputs I'm waiting for, and from whom
 
@@ -76,4 +76,5 @@ Decided 23 Nov (Salah; passed on by Thread 0, 23 Nov, 19:55):
   19 browser checks pass on an iPhone 13-sized screen. The home page is pixel-identical to before. Meta descriptions for the other pages wait for Marketing's copy.
 - **23 Nov, later:** wordmark matched to the app's spec. Tools decision recorded. Step 2 plan written in the private Clean(ish) Website Plan.
 - **23 Nov, evening:** Salah said yes to all. Technical changes merged to `main`; requests posted; plan decisions recorded.
+- **23 Nov, late:** live site checked from the new environment. All 19 browser checks pass on cleanish.app itself (form sending intercepted, nothing sent to Formspree). The 404 page is ours. www redirects to cleanish.app. The sitemap, robots.txt, script and fonts are served. GitHub Pages sends no HSTS header for the custom domain (expected on Pages). `/help` is a 404 until Support's page is built.
 - **Next:** the plain version as Marketing's copy, Legal's notice and Support's help page arrive (target 29 Nov); the deploy workflow and the reveal's empty scaffolding (no screens, no story) until the repository is private (30 Nov).
