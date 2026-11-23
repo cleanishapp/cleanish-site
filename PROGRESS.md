@@ -8,7 +8,7 @@ Kept by Thread Website. Last updated 23 Nov 2026.
 
 **Plan (step 2):** the Clean(ish) Website Plan, a private doc: https://claude.ai/artifact/86Q2Wo5udbNmcmhSawKNPF. This repository is public, so the plan lives there, not here.
 
-## Open for Salah
+## Open decisions for Salah
 
 Decided 23 Nov (Salah; passed on by Thread 0, 23 Nov, 18:45), all six as recommended:
 
@@ -31,7 +31,9 @@ Decided 23 Nov (Salah; passed on by Thread 0, 23 Nov, 19:55):
 - [ ] **Step 2 plan:** proposed 23 Nov in the Clean(ish) Website Plan, with six decisions for Salah at the end.
   - [x] Waitlist (Salah, 23 Nov, passed on by Thread 0, 20:10): the waitlist email goes out on release day, the day the stores approve; the form's promise stays as it is; on release day the form gives way to the store buttons.
   - [x] Private repository (Salah, 23 Nov, passed on by Thread 0, 20:20): the GitHub Team plan (Salah is finishing it), then cleanish-site goes private, by 30 Nov. No reveal content is pushed until it is private.
-  - [ ] The other four: still with Salah.
+  - [x] The other four (Salah, 23 Nov, "yes to all" in this thread): the reveal switches on through a pull request prepared in advance that Salah merges; deploy through GitHub Actions; the reveal pre-rendered to plain HTML; a copy switch at 00:00 UK on 1 Jan and the founding-price line off automatically at 00:00 UK on 8 Jan.
+- [x] **Technical changes live** (Salah, 23 Nov): merged to `main` the same evening.
+- [x] **Requests to Marketing, Legal and Support** with the dates below (Salah, 23 Nov): posted to the Noticeboard the same evening.
 
 ## Salah-only tasks
 
@@ -42,21 +44,21 @@ Decided 23 Nov (Salah; passed on by Thread 0, 23 Nov, 19:55):
 - [ ] Let this session reach the app repository (cleanishapp/cleanish-app), so Thread Website can file `for-thread-0` issues. Attaching it was refused on 22 Nov.
 - [ ] Let this session's network reach cleanish.app, so the live site can be checked. It is blocked today.
 
-## Waiting on other threads (inputs the build needs)
+## Docs and inputs I'm waiting for, and from whom
 
 | What | From | Needed by | Status |
 |---|---|---|---|
-| Plain version copy: home page line(s), waitlist label, button, consent line, thanks page, 404 page, page titles and meta descriptions, social preview image text | Marketing | 27 Nov | not asked yet |
-| Channel codes for `?from=` (e.g. tiktok, tiktok-fr, instagram, bio links) | Marketing | 27 Nov | not asked yet |
-| Website-only privacy notice (waitlist and hosting), to stand in until the full policy goes live | Legal | 27 Nov | not asked yet |
-| Reveal copy and storyboard (see the plan) | Marketing | 3 Dec | not asked yet |
-| Privacy policy, Terms and consumer health data, final text with version and date, in six languages (live 8 Dec) | Legal, then Translations | 5 Dec | not asked yet |
-| Impressum text; Quebec contact for personal information | Legal | 5 Dec | not asked yet |
-| Help page, English (approved 22 Nov in the Support doc); it goes at cleanish.app/help.html | Support | 27 Nov | ready to take |
+| Plain version copy: home page line(s), waitlist label, button, consent line, thanks page, 404 page, page titles and meta descriptions, social preview image text | Marketing | 27 Nov | asked 23 Nov |
+| Channel codes for `?from=` (e.g. tiktok, tiktok-fr, instagram, bio links) | Marketing | 27 Nov | asked 23 Nov |
+| Website-only privacy notice (waitlist and hosting), to stand in until the full policy goes live | Legal | 27 Nov | asked 23 Nov |
+| Reveal copy and storyboard (see the plan) | Marketing | 3 Dec | asked 23 Nov |
+| Privacy policy, Terms and consumer health data, final text with version and date, in six languages (live 8 Dec) | Legal, then Translations | 5 Dec | asked 23 Nov |
+| Impressum text; Quebec contact for personal information | Legal | 5 Dec | asked 23 Nov |
+| Help page, English (approved 22 Nov in the Support doc); it goes at cleanish.app/help, the address the app links to (Build #39) | Support | 27 Nov | asked 23 Nov |
 | Help page and site copy in French, German, Swiss German, Dutch and Arabic | Translations, after Salah approves the English | 5 Dec | — |
-| Images for the reveal (see the plan) | Build, through Thread 0 | 3 Dec | — |
-| App Store and Google Play listing links (known now; they work from approval) | Thread 0 | 3 Dec | — |
-| A security look at the waitlist form and the site's security policy before the plain version goes live | Security | 1 Dec | not asked yet |
+| Images for the reveal (see the plan) | Build, through Thread 0 | 3 Dec | asked 23 Nov |
+| App Store and Google Play listing links (known now; they work from approval) | Thread 0 | 3 Dec | asked 23 Nov |
+| A security look at the waitlist form and the site's security policy before the plain version goes live | Security | 1 Dec | asked 23 Nov, through Thread 0 |
 | A read of the reveal's dependency list | Security | 8 Dec | — |
 
 ## Hand-over
@@ -73,4 +75,5 @@ Decided 23 Nov (Salah; passed on by Thread 0, 23 Nov, 19:55):
 
   19 browser checks pass on an iPhone 13-sized screen. The home page is pixel-identical to before. Meta descriptions for the other pages wait for Marketing's copy.
 - **23 Nov, later:** wordmark matched to the app's spec. Tools decision recorded. Step 2 plan written in the private Clean(ish) Website Plan.
-- **Next:** Salah's "merge" for the technical changes; his six decisions on the plan; then the plain version with Marketing's copy.
+- **23 Nov, evening:** Salah said yes to all. Technical changes merged to `main`; requests posted; plan decisions recorded.
+- **Next:** the plain version as Marketing's copy, Legal's notice and Support's help page arrive (target 29 Nov); the deploy workflow and the reveal's empty scaffolding (no screens, no story) until the repository is private (30 Nov).
