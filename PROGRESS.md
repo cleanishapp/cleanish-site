@@ -4,7 +4,9 @@ Kept by Thread Website. Last updated 23 Nov 2026.
 
 **Scope (Salah, 22 Nov):** Thread Website owns the build, the technical side, security and design of cleanish.app. Thread Marketing writes the copy. Thread Legal writes privacy, Terms, consumer health data and the Impressum. Thread Support writes the help page. The website is built around their text, and no website copy is written here.
 
-**Key dates:** faceless posts with "waitlist link in bio" from 24 Nov · plain version live by 3 Dec (the plan's deadline is 17 Dec) · store submission 18 Dec · store approval expected 22–28 Dec, when the reveal goes live · download buttons from 1 Jan.
+**Key dates (Launch Plan, re-dated 22 Nov):** posts with "waitlist link in bio" from 24 Nov · plain version complete 29 Nov · legal pages live 8 Dec (latest 16 Dec) · reveal ready and reviewed 10 Dec · submission 10 Dec (latest 18 Dec) · approval expected 13–17 Dec, when the app is released and the reveal goes live · 1 Jan campaign peak · 8 Jan founding price ends.
+
+**Plan (step 2):** the Clean(ish) Website Plan, a private doc: https://claude.ai/artifact/86Q2Wo5udbNmcmhSawKNPF. This repository is public, so the plan lives there, not here.
 
 ## Open for Salah
 
@@ -17,13 +19,23 @@ Decided 23 Nov (Salah; passed on by Thread 0, 23 Nov, 18:45), all six as recomme
   - Still to do: the icon, favicon, Apple touch icon and social preview image are drawn by the site itself, and favicon.svg uses Helvetica, not Inter. They will be replaced with the app's own files (assets/icon.png, assets/favicon.png, assets/splash/wordmark-*.png on branch dash) once the app repository is attached.
 - [x] **Impressum** carries the managing director's name (one exception to the "no real people" rule). Waits for Legal's text.
 - [x] **First small technical merge now,** ahead of the full plain version. Built on the branch 23 Nov; goes to `main` once Salah has seen it.
-- [ ] **Plain and reveal plan, with the two switches (step 2).** Proposal to follow.
+Decided 23 Nov (Salah; passed on by Thread 0, 23 Nov, 19:55):
+
+- [x] **Tools for the reveal:** GSAP yes, Lenis yes, React Bits yes. The reveal is its own build and can be React; the plain site stays static and minimal (the frame for the legal and help pages). Conditions:
+  1. Lenis respects "reduce motion" and is tested on an iPhone and an Android phone; if it feels wrong, it comes out and GSAP does the work.
+  2. React Bits components go in one at a time, each read, its extra libraries listed; nothing from a CDN, everything bundled, exact versions pinned, Dependabot on.
+  3. Page weight under about 1 MB on first load.
+  4. Thread Security reads the dependency list before the reveal goes live.
+
+  Ready and reviewed by about 10 Dec.
+- [ ] **Step 2 plan:** proposed 23 Nov in the Clean(ish) Website Plan, with six decisions for Salah at the end.
 
 ## Salah-only tasks
 
 - [ ] Formspree dashboard: check the plan, whether reCAPTCHA is on, whether IP addresses are stored, and how long submissions are kept. If the plan offers it, restrict the form to the cleanish.app domain. The new background send no longer needs Formspree's custom redirect.
 - [ ] GitHub, cleanish-site, Settings, Pages: confirm "Enforce HTTPS" is ticked.
 - [ ] Branch protection on `main` of cleanish-site: changes by pull request only, no force-push. This is already on the Admin List for both repositories.
+- [ ] If the plan is agreed: the organisation's Team plan (already on the Admin List), then make cleanish-site private by 30 Nov, and set Pages' source to "GitHub Actions".
 - [ ] Let this session reach the app repository (cleanishapp/cleanish-app), so Thread Website can file `for-thread-0` issues. Attaching it was refused on 22 Nov.
 - [ ] Let this session's network reach cleanish.app, so the live site can be checked. It is blocked today.
 
@@ -33,16 +45,16 @@ Decided 23 Nov (Salah; passed on by Thread 0, 23 Nov, 18:45), all six as recomme
 |---|---|---|---|
 | Plain version copy: home page line(s), waitlist label, button, consent line, thanks page, 404 page, page titles and meta descriptions, social preview image text | Marketing | 27 Nov | not asked yet |
 | Channel codes for `?from=` (e.g. tiktok, tiktok-fr, instagram, bio links) | Marketing | 27 Nov | not asked yet |
-| Website-only privacy notice (waitlist and hosting), to replace the app draft now live, which names Flora | Legal | 27 Nov | not asked yet |
-| Reveal version copy: the story, sections, Clean(ish) January, pre-order and pre-registration buttons, launch-day download wording | Marketing | 12 Dec | not asked yet |
-| App privacy policy, Terms and consumer health data, as v0.9 (lawyer-ready), at their permanent addresses before submission | Legal | 15 Dec | not asked yet |
-| Impressum text; Quebec contact for personal information | Legal | 15 Dec | not asked yet |
-| Signed v1.0 of each legal page, with version and last-updated date | Legal | after the lawyer's sign-off (19–25 Dec) | — |
-| Help page, English (approved 22 Nov in the Support doc); it goes at cleanish.app/help/ | Support | 1 Dec | ready to take |
-| Help page and site copy in French, German, Swiss German, Dutch and Arabic | Translations, after Salah approves the English | 15 Dec | — |
-| App screenshots for the reveal (the store listing images) | Build, through Thread 0 | 18 Dec | — |
-| App Store and Google Play links, pre-order and pre-registration links | Salah, through Thread 0 | the day of approval | — |
+| Website-only privacy notice (waitlist and hosting), to stand in until the full policy goes live | Legal | 27 Nov | not asked yet |
+| Reveal copy and storyboard (see the plan) | Marketing | 3 Dec | not asked yet |
+| Privacy policy, Terms and consumer health data, final text with version and date, in six languages (live 8 Dec) | Legal, then Translations | 5 Dec | not asked yet |
+| Impressum text; Quebec contact for personal information | Legal | 5 Dec | not asked yet |
+| Help page, English (approved 22 Nov in the Support doc); it goes at cleanish.app/help.html | Support | 27 Nov | ready to take |
+| Help page and site copy in French, German, Swiss German, Dutch and Arabic | Translations, after Salah approves the English | 5 Dec | — |
+| Images for the reveal (see the plan) | Build, through Thread 0 | 3 Dec | — |
+| App Store and Google Play listing links (known now; they work from approval) | Thread 0 | 3 Dec | — |
 | A security look at the waitlist form and the site's security policy before the plain version goes live | Security | 1 Dec | not asked yet |
+| A read of the reveal's dependency list | Security | 8 Dec | — |
 
 ## Hand-over
 
@@ -57,4 +69,5 @@ Decided 23 Nov (Salah; passed on by Thread 0, 23 Nov, 18:45), all six as recomme
   - the fonts cut from 8 files to 2 (one variable font); the inline styles moved into the stylesheet
 
   19 browser checks pass on an iPhone 13-sized screen. The home page is pixel-identical to before. Meta descriptions for the other pages wait for Marketing's copy.
-- **Next:** step 2 proposal (plain version, reveal version, the two switches), then the first small merge once Salah agrees.
+- **23 Nov, later:** wordmark matched to the app's spec. Tools decision recorded. Step 2 plan written in the private Clean(ish) Website Plan.
+- **Next:** Salah's "merge" for the technical changes; his six decisions on the plan; then the plain version with Marketing's copy.
