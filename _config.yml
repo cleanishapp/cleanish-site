@@ -1,0 +1,7 @@
+# GitHub Pages builds this site with Jekyll. Publish only the website itself:
+# hand-over notes, templates and docs stay in the repository, never on cleanish.app.
+exclude:
+  - PROGRESS.md
+  - README.md
+  - docs
+  - _templates
