@@ -8,20 +8,19 @@
  *    The ?from= part is then removed from the address bar, so a copied link
  *    doesn't carry it.
  * 2. Sends the form in the background, so the visitor stays on our site and
- *    lands on our own thanks page. If that fails, or JavaScript is off, the
- *    form posts normally.
- * 3. Bulk sign-ups: a filled-in hidden field or a submit within 1.5 s of the
- *    page loading is treated as a bot: it sees the thanks page, nothing is sent.
- *    Formspree's own spam filtering is the main protection, because the form
- *    endpoint is public.
+ *    lands on our own thanks page. With JavaScript off, the form posts normally.
+ *    If the background send fails, the form shows its error line and the
+ *    visitor can try again: nothing is ever sent twice automatically.
+ * 3. Bulk sign-ups: a filled-in hidden field is treated as a bot (it sees the
+ *    thanks page, nothing is sent). Formspree's own spam filtering is the main
+ *    protection, because the form endpoint is public. There is no timing
+ *    trap: it would silently drop real people who autofill and submit fast.
  */
 (function () {
   'use strict';
 
   var KEY = 'cleanish-from';
   var VALID = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-  var MIN_MS = 1500;
-  var started = Date.now();
 
   function remember(value) {
     try { window.sessionStorage.setItem(KEY, value); } catch (e) { /* storage off */ }
@@ -54,7 +53,14 @@
   if (!form) return;
   if (source && form.elements.source) form.elements.source.value = source;
 
+  var errorLine = form.querySelector('.form-error');
+  var button = form.querySelector('button[type=submit]');
   var sending = false;
+
+  function showError(on) {
+    if (errorLine) errorLine.hidden = !on;
+  }
+
   form.addEventListener('submit', function (event) {
     if (!window.fetch || !window.FormData) return; // plain post
 
@@ -63,13 +69,13 @@
 
     var thanks = form.getAttribute('data-thanks') || '/thanks.html';
     var trap = form.elements._gotcha;
-    if ((trap && trap.value) || Date.now() - started < MIN_MS) {
+    if (trap && trap.value) {
       window.location.href = thanks;
       return;
     }
 
     sending = true;
-    var button = form.querySelector('button[type=submit]');
+    showError(false);
     if (button) button.disabled = true;
 
     window.fetch(form.action, {
@@ -80,10 +86,10 @@
       if (!response.ok) throw new Error('HTTP ' + response.status);
       window.location.href = thanks;
     }).catch(function () {
-      // Fall back to the normal post; Formspree then shows its own page.
       sending = false;
       if (button) button.disabled = false;
-      form.submit();
+      showError(true);
+      if (errorLine) errorLine.focus();
     });
   });
 })();

@@ -91,4 +91,9 @@ Decided 23 Nov (Salah; passed on by Thread 0, 23 Nov, 19:55):
   - **Found:** GitHub Pages has published PROGRESS.md as a page on cleanish.app since 23 Nov. That page loads an outside script (anchor-js from a CDN). The fix, `_config.yml` excluding it, is on the branch. Pushing it to `main` was blocked pending Salah's OK.
   - Language folders wait for the first translated page, because git can't hold empty folders.
 - **26 Nov, 23:00 UTC:** Thread Security's verdict on the PROGRESS.html exposure: Low, nothing to rotate. Filed as issue #1 in this repository (for-website), with the status of its three asks. `.nojekyll` not added (it would publish more, not less); Thread 0 agrees. The lasting fix is the Actions deploy.
+- **26 Nov, late:** Security review 2A for the website (5 Low findings, issue #2). Fixed on the branch:
+  - `/.well-known/security.txt` (Contact hello@, Expires 26 Nov 2027; included through `_config.yml`)
+  - waitlist.js: the 1.5 s timing trap removed, so fast real people are never dropped; a failed send now shows an error line and never posts twice by itself
+
+  24 checks pass. The error line's words ("Sorry, that didn't go through. Please try again.") are a stand-in for Marketing. Waiting on others: privacy text (Legal), wording (Salah) and the help page (Salah).
 - **Next:** the plain version as Marketing's copy, Legal's notice and Support's help page arrive (target 29 Nov); the deploy workflow and the reveal's empty scaffolding (no screens, no story) until the repository is private (30 Nov).

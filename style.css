@@ -34,6 +34,7 @@ h3{font-size:19px;font-weight:700}
 .signup .row{display:flex;gap:8px;flex-wrap:wrap}
 .signup input[type=email]{flex:1 1 220px;min-width:0;height:52px;border-radius:14px;border:1px solid var(--line);background:var(--bg);color:var(--ink);padding:0 16px;font:inherit}
 .signup button{height:52px;border:0;border-radius:14px;background:var(--leaf);color:var(--on-leaf);font:700 16px var(--f-body);padding:0 22px;cursor:pointer}
+.form-error{margin:0;color:var(--drink);font-size:14.5px;font-weight:600}
 .signup small{color:var(--muted);font-size:13.5px}
 .hidden{position:absolute;left:-9999px}
 .hero-home{padding-top:40px}
