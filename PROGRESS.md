@@ -35,7 +35,7 @@ Decided 23 Nov (Salah; passed on by Thread 0, 23 Nov, 19:55):
 - [x] **Technical changes live** (Salah, 23 Nov): merged to `main` the same evening.
 - [x] **Requests to Marketing, Legal and Support** with the dates below (Salah, 23 Nov): posted to the Noticeboard the same evening.
 
-- [ ] **Merge the PROGRESS.md fix now.** Salah said "go" to Thread 0 (26 Nov, 23:55 UTC). The push was blocked twice by this session's permission check, which needs his word in this chat. Waiting for him to type it here.
+- [x] **PROGRESS.md fix merged** (Salah, in this chat, 27 Nov): `_config.yml` only (2b68760 on `main`). Live within 45 s. /PROGRESS.html, /PROGRESS.md, /PROGRESS, /_templates/legal.html and /_config.yml all return 404; every other live file matches `main`. Issue #1 closed. The Search Console check stays on Salah's Desk.
 - [x] **Help page before approval** (Salah, 26 Nov, 23:55 UTC, relayed by Thread 0): **hold**. It stays on the branch until Salah accepts the early description or the reveal is on. Thread 0 will raise the timing again before the testers' production copy.
 - [ ] **Real app icon:** merge.
 - [ ] **Reveal design checkpoints** (28 Nov, 5 Dec, 9 Dec) and matching the app's white/black look.
