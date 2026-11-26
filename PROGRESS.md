@@ -35,8 +35,8 @@ Decided 23 Nov (Salah; passed on by Thread 0, 23 Nov, 19:55):
 - [x] **Technical changes live** (Salah, 23 Nov): merged to `main` the same evening.
 - [x] **Requests to Marketing, Legal and Support** with the dates below (Salah, 23 Nov): posted to the Noticeboard the same evening.
 
-- [ ] **Merge the PROGRESS.md fix now** (one file, nothing visible changes). Recommended: yes, today.
-- [ ] **Help page before approval.** It names Flora and explains the app, but the stores need a working support address at submission (10 Dec), and testers' build links to cleanish.app/help. Recommended: live at /help now, marked noindex, not linked from the site or the sitemap until the reveal. Alternative: hold it until approval day.
+- [ ] **Merge the PROGRESS.md fix now.** Salah said "go" to Thread 0 (26 Nov, 23:55 UTC). The push was blocked twice by this session's permission check, which needs his word in this chat. Waiting for him to type it here.
+- [x] **Help page before approval** (Salah, 26 Nov, 23:55 UTC, relayed by Thread 0): **hold**. It stays on the branch until Salah accepts the early description or the reveal is on. Thread 0 will raise the timing again before the testers' production copy.
 - [ ] **Real app icon:** merge.
 - [ ] **Reveal design checkpoints** (28 Nov, 5 Dec, 9 Dec) and matching the app's white/black look.
 
