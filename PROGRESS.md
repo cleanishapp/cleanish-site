@@ -35,6 +35,11 @@ Decided 23 Nov (Salah; passed on by Thread 0, 23 Nov, 19:55):
 - [x] **Technical changes live** (Salah, 23 Nov): merged to `main` the same evening.
 - [x] **Requests to Marketing, Legal and Support** with the dates below (Salah, 23 Nov): posted to the Noticeboard the same evening.
 
+- [ ] **Merge the PROGRESS.md fix now** (one file, nothing visible changes). Recommended: yes, today.
+- [ ] **Help page before approval.** It names Flora and explains the app, but the stores need a working support address at submission (10 Dec), and testers' build links to cleanish.app/help. Recommended: live at /help now, marked noindex, not linked from the site or the sitemap until the reveal. Alternative: hold it until approval day.
+- [ ] **Real app icon:** merge.
+- [ ] **Reveal design checkpoints** (28 Nov, 5 Dec, 9 Dec) and matching the app's white/black look.
+
 ## Salah-only tasks
 
 - [ ] Formspree dashboard: check the plan, whether reCAPTCHA is on, whether IP addresses are stored, and how long submissions are kept. If the plan offers it, restrict the form to the cleanish.app domain. The new background send no longer needs Formspree's custom redirect.
@@ -80,4 +85,9 @@ Decided 23 Nov (Salah; passed on by Thread 0, 23 Nov, 19:55):
 - **24 Nov:** Thread Security's look at the waitlist form and security policy (cleanish-app `security` branch, docs/SECURITY-AUDIT-1.md section 8) found nothing to fix. Its A15 hashes checked against the live site: all 10 files match `main` at a556618 (terms.html needed a re-fetch; four re-fetches matched byte for byte). Result sent to Thread 0.
 - **24 Nov, 21:10 UK:** Thread 0 restarted. Ping it at `session_01AVn4eDSbEXUHuAXch2cvK4` (checked: same environment and planning branch as the old session, which handed over and stopped). The old `session_01AVn4eF18baSXTEahHhWAAC` is retired.
 - **26 Nov, 01:45 UTC:** Thread 0 restarted again. Ping it at `session_01AVn4eD2mmyBhfU3B31CFes` (checked: started from the web on the planning branch; the previous session had just handed over). `session_01AVn4eDSbEXUHuAXch2cvK4` is retired. GitHub issues labelled `for-thread-0` remain the channel.
+- **26 Nov, evening:**
+  - Help page built on the branch at `/help` from Support's English (Support doc, "Help page"; checked word for word). It has a contents list, 11 sections and one H1, and passes all checks. It is marked noindex and not linked from other pages, because it names Flora and explains the app; see Open decisions.
+  - Legal-page template in `_templates/` (version, last-updated date, language links, contents list). Not published.
+  - **Found:** GitHub Pages has published PROGRESS.md as a page on cleanish.app since 23 Nov. That page loads an outside script (anchor-js from a CDN). The fix, `_config.yml` excluding it, is on the branch. Pushing it to `main` was blocked pending Salah's OK.
+  - Language folders wait for the first translated page, because git can't hold empty folders.
 - **Next:** the plain version as Marketing's copy, Legal's notice and Support's help page arrive (target 29 Nov); the deploy workflow and the reveal's empty scaffolding (no screens, no story) until the repository is private (30 Nov).

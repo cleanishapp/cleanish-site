@@ -57,5 +57,12 @@ footer nav{display:flex;gap:16px;flex-wrap:wrap}
 .legal th,.legal td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
 .legal th{background:var(--surface-2)}
 .tablewrap{overflow-x:auto}
+.legal .lead-in{font-size:18px;color:var(--muted);margin:8px 0 0}
+.docmeta{margin:6px 0 0;font-size:14.5px;color:var(--muted)}
+.langs{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14.5px;margin-top:8px}
+.toc{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px 18px;margin:24px 0 8px}
+.toc-title{margin:0 0 6px;font-weight:700;font-size:15px;color:var(--muted)}
+.toc ol{margin:0;padding-left:22px;display:grid;gap:6px;font-size:16px}
+.legal h2[id]{scroll-margin-top:16px}
 .note{background:var(--drink-soft);border-radius:14px;padding:12px 14px;font-size:14.5px}
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
