@@ -1,11 +1,8 @@
 # GitHub Pages builds this site with Jekyll. Publish only the website itself:
 # hand-over notes, templates and docs stay in the repository, never on cleanish.app.
-<<<<<<< HEAD
 # .well-known holds security.txt; Jekyll skips dot-folders unless told to include them.
 include:
   - .well-known
-=======
->>>>>>> origin/main
 exclude:
   - PROGRESS.md
   - README.md
