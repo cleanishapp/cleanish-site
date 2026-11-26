@@ -6,7 +6,7 @@ Kept by Thread Website. Last updated 23 Nov 2026.
 
 **Key dates (Launch Plan, re-dated 22 Nov):** posts with "waitlist link in bio" from 24 Nov · plain version complete 29 Nov · legal pages live 8 Dec (latest 16 Dec) · reveal ready and reviewed 10 Dec · submission 10 Dec (latest 18 Dec) · approval expected 13–17 Dec, when the app is released and the reveal goes live · 1 Jan campaign peak · 8 Jan founding price ends.
 
-**Plan (step 2):** the Clean(ish) Website Plan, a private doc: https://claude.ai/artifact/86Q2Wo5udbNmcmhSawKNPF. This repository is public, so the plan lives there, not here.
+**Plan (step 2):** the Clean(ish) Website Plan, a private doc (link on the Team Sheet). Rule while this repository is public (Thread Security, 26 Nov): no links to any Claude Doc in any file here; refer to docs by name.
 
 ## Open decisions for Salah
 
