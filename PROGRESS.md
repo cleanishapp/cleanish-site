@@ -6,7 +6,7 @@ Kept by Thread Website. Last updated 23 Nov 2026.
 
 **Key dates (Launch Plan, re-dated 22 Nov):** posts with "waitlist link in bio" from 24 Nov · plain version complete 29 Nov · legal pages live 8 Dec (latest 16 Dec) · reveal ready and reviewed 10 Dec · submission 10 Dec (latest 18 Dec) · approval expected 13–17 Dec, when the app is released and the reveal goes live · 1 Jan campaign peak · 8 Jan founding price ends.
 
-**Plan (step 2):** the Clean(ish) Website Plan, a private doc: https://claude.ai/artifact/86Q2Wo5udbNmcmhSawKNPF. This repository is public, so the plan lives there, not here.
+**Plan (step 2):** the Clean(ish) Website Plan, a private doc (link on the Team Sheet). Rule while this repository is public (Thread Security, 26 Nov): no links to any Claude Doc in any file here; refer to docs by name.
 
 ## Open decisions for Salah
 
@@ -16,7 +16,7 @@ Decided 23 Nov (Salah; passed on by Thread 0, 23 Nov, 18:45), all six as recomme
 - [x] **Page language stored with each sign-up** (`lang`, taken from the page and never asked). Built 23 Nov.
 - [x] **Hosting:** stay on GitHub Pages through launch, with the security policy in a meta tag. Built 23 Nov.
 - [x] **Wordmark:** keep the uppercase CLEAN(ish) logo, **on condition that it matches the app's own wordmark and icon exactly and is tidy.** Checked on 23 Nov against the spec Thread 0 read from the app (DESIGN.md, design-tokens.json, Wordmark.tsx on branch dash). The wordmark now matches: Inter 800, letter-spacing 0 (was 0.005em on CLEAN), line-height 1, "(ish)" 2% left margin, ink #151515 / #F2EEF0, berry #B05A7A / #D98AA8.
-  - Still to do: the icon, favicon, Apple touch icon and social preview image are drawn by the site itself, and favicon.svg uses Helvetica, not Inter. They will be replaced with the app's own files (assets/icon.png, assets/favicon.png, assets/splash/wordmark-*.png on branch dash) once the app repository is attached.
+  - Icon, 23 Nov: the site showed a pink "(ish)" square that isn't the app icon. Replaced on the branch with the real icon (cleanish-app `dash`, assets/icon.png): the home-page icon, favicon-32.png, apple-touch-icon.png and the social preview image (same words, real icon); favicon.svg removed. The app's assets/favicon.png is Expo's default placeholder, so it wasn't used. Waiting for Salah's look before merging.
 - [x] **Impressum** carries the managing director's name (one exception to the "no real people" rule). Waits for Legal's text.
 - [x] **First small technical merge now,** ahead of the full plain version. Built on the branch 23 Nov; goes to `main` once Salah has seen it.
 Decided 23 Nov (Salah; passed on by Thread 0, 23 Nov, 19:55):
@@ -35,6 +35,11 @@ Decided 23 Nov (Salah; passed on by Thread 0, 23 Nov, 19:55):
 - [x] **Technical changes live** (Salah, 23 Nov): merged to `main` the same evening.
 - [x] **Requests to Marketing, Legal and Support** with the dates below (Salah, 23 Nov): posted to the Noticeboard the same evening.
 
+- [x] **PROGRESS.md fix merged** (Salah, in this chat, 27 Nov): `_config.yml` only (2b68760 on `main`). Live within 45 s. /PROGRESS.html, /PROGRESS.md, /PROGRESS, /_templates/legal.html and /_config.yml all return 404; every other live file matches `main`. Issue #1 closed. The Search Console check stays on Salah's Desk.
+- [x] **Help page before approval** (Salah, 26 Nov, 23:55 UTC, relayed by Thread 0): **hold**. It stays on the branch until Salah accepts the early description or the reveal is on. Thread 0 will raise the timing again before the testers' production copy.
+- [ ] **Real app icon:** merge.
+- [ ] **Reveal design checkpoints** (28 Nov, 5 Dec, 9 Dec) and matching the app's white/black look.
+
 ## Salah-only tasks
 
 - [ ] Formspree dashboard: check the plan, whether reCAPTCHA is on, whether IP addresses are stored, and how long submissions are kept. If the plan offers it, restrict the form to the cleanish.app domain. The new background send no longer needs Formspree's custom redirect.
@@ -42,7 +47,7 @@ Decided 23 Nov (Salah; passed on by Thread 0, 23 Nov, 19:55):
 - [ ] Branch protection on `main` of cleanish-site: changes by pull request only, no force-push. This is already on the Admin List for both repositories.
 - [ ] If the plan is agreed: the organisation's Team plan (already on the Admin List), then make cleanish-site private by 30 Nov, and set Pages' source to "GitHub Actions".
 - [ ] Let this session reach the app repository (cleanishapp/cleanish-app), so Thread Website can file `for-thread-0` issues. Attaching it was refused on 22 Nov.
-- [ ] Let this session's network reach cleanish.app, so the live site can be checked. It is blocked today.
+- [x] Let this session's network reach cleanish.app: done 23 Nov (personal environment "cleanish-site", the same as Default plus cleanish.app and www.cleanish.app).
 
 ## Docs and inputs I'm waiting for, and from whom
 
@@ -76,4 +81,25 @@ Decided 23 Nov (Salah; passed on by Thread 0, 23 Nov, 19:55):
   19 browser checks pass on an iPhone 13-sized screen. The home page is pixel-identical to before. Meta descriptions for the other pages wait for Marketing's copy.
 - **23 Nov, later:** wordmark matched to the app's spec. Tools decision recorded. Step 2 plan written in the private Clean(ish) Website Plan.
 - **23 Nov, evening:** Salah said yes to all. Technical changes merged to `main`; requests posted; plan decisions recorded.
+- **23 Nov, late:** live site checked from the new environment. All 19 browser checks pass on cleanish.app itself (form sending intercepted, nothing sent to Formspree). The 404 page is ours. www redirects to cleanish.app. The sitemap, robots.txt, script and fonts are served. GitHub Pages sends no HSTS header for the custom domain (expected on Pages). `/help` is a 404 until Support's page is built.
+- **24 Nov:** Thread Security's look at the waitlist form and security policy (cleanish-app `security` branch, docs/SECURITY-AUDIT-1.md section 8) found nothing to fix. Its A15 hashes checked against the live site: all 10 files match `main` at a556618 (terms.html needed a re-fetch; four re-fetches matched byte for byte). Result sent to Thread 0.
+- **Thread 0's session** (latest first): `session_01AVn4eBC35kx5ihXUY3xyKf` from 27 Nov, 20:48 UTC (checked: titled Thread 0, started from the web on the planning branch; the previous one is archived). Earlier sessions are retired. GitHub issues labelled `for-thread-0` remain the channel.
+- **26 Nov, evening:**
+  - Help page built on the branch at `/help` from Support's English (Support doc, "Help page"; checked word for word). It has a contents list, 11 sections and one H1, and passes all checks. It is marked noindex and not linked from other pages, because it names Flora and explains the app; see Open decisions.
+  - Legal-page template in `_templates/` (version, last-updated date, language links, contents list). Not published.
+  - **Found:** GitHub Pages has published PROGRESS.md as a page on cleanish.app since 23 Nov. That page loads an outside script (anchor-js from a CDN). The fix, `_config.yml` excluding it, is on the branch. Pushing it to `main` was blocked pending Salah's OK.
+  - Language folders wait for the first translated page, because git can't hold empty folders.
+- **26 Nov, 23:00 UTC:** Thread Security's verdict on the PROGRESS.html exposure: Low, nothing to rotate. Filed as issue #1 in this repository (for-website), with the status of its three asks. `.nojekyll` not added (it would publish more, not less); Thread 0 agrees. The lasting fix is the Actions deploy.
+- **26 Nov, late:** Security review 2A for the website (5 Low findings, issue #2). Fixed on the branch:
+  - `/.well-known/security.txt` (Contact hello@, Expires 26 Nov 2027; included through `_config.yml`)
+  - waitlist.js: the 1.5 s timing trap removed, so fast real people are never dropped; a failed send now shows an error line and never posts twice by itself
+
+  24 checks pass. The error line's words ("Sorry, that didn't go through. Please try again.") are a stand-in for Marketing. Waiting on others: privacy text (Legal), wording (Salah) and the help page (Salah).
+- **27 Nov, evening:** rebuilt to the **Brand book** (a tab in the Marketing doc, v1, decided by Salah 27 Nov; link on the Team Sheet):
+  - icon = pink tile #E88DAF with "(ish)" in ink, from the brand book's SVG (`icon.svg`; favicon-32, apple-touch-icon and the social image made from it)
+  - white and black backgrounds; ink buttons; berry for accents and links; secondary pink only for big areas with ink on top (the date badge)
+  - hairline borders and no shadows; dark-mode panels #1C1C1E with a berry line; headings Bold 700
+  - the wordmark was already exact
+
+  This replaces the 23 Nov icon taken from the app's assets/icon.png, which the brand book retires. Build's app icon file doesn't match the brand book yet (told Thread 0). All checks pass; on the branch, waiting for Salah's merge.
 - **Next:** the plain version as Marketing's copy, Legal's notice and Support's help page arrive (target 29 Nov); the deploy workflow and the reveal's empty scaffolding (no screens, no story) until the repository is private (30 Nov).
