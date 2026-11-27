@@ -104,4 +104,10 @@ Decided 23 Nov (Salah; passed on by Thread 0, 23 Nov, 19:55):
   This replaces the 23 Nov icon taken from the app's assets/icon.png, which the brand book retires. Build's app icon file doesn't match the brand book yet (told Thread 0). All checks pass; on the branch, waiting for Salah's merge.
 - **27 Nov, late:** Salah's yes in this chat: the security fixes and the brand look are merged (cac8603 on `main`, without the help page). Live in 30 s. Every live file matches `main`; all live browser checks pass; /help, /PROGRESS.html and /_templates/ are 404. Reveal design: yes (checkpoints 1, 5 and 9 Dec).
 - **27 Nov, late:** Salah: "replace 'cut alc' only, leave the junk for now". On the branch, "and alcohol" is removed from the home page's four "cut back on junk food and alcohol" phrases (two visible lines, the meta description and the social description). Salah: "that wording is fine". Merged (498cf7b on `main`), live in 45 s, index.html matches `main`, all live checks pass.
+- **27 Nov, night:** reveal checkpoint 1 done.
+  - A private preview link for Salah (link in this thread's chat, not here) with two directions, built with GSAP 3.15.1, Lenis 1.3.27 and two React Bits components (ScrollFloat and ScrollReveal), each read line by line.
+  - React Bits' licence is MIT + Commons Clause: use in our site is fine, but redistributing the components isn't, so their source must not sit in a public repository.
+  - Measured first load as cleanish.app would send it: about 252 KB against the 1,000 KB budget.
+  - Checked on phone (light, dark, reduce motion) and desktop.
+  - The reveal's source is kept outside this repository until it goes private (30 Nov). **If this container is lost before then, it is rebuilt from the published preview.**
 - **Next:** the plain version as Marketing's copy, Legal's notice and Support's help page arrive (target 29 Nov); the deploy workflow and the reveal's empty scaffolding (no screens, no story) until the repository is private (30 Nov).
