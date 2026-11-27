@@ -102,4 +102,6 @@ Decided 23 Nov (Salah; passed on by Thread 0, 23 Nov, 19:55):
   - the wordmark was already exact
 
   This replaces the 23 Nov icon taken from the app's assets/icon.png, which the brand book retires. Build's app icon file doesn't match the brand book yet (told Thread 0). All checks pass; on the branch, waiting for Salah's merge.
+- **27 Nov, late:** Salah's yes in this chat: the security fixes and the brand look are merged (cac8603 on `main`, without the help page). Live in 30 s. Every live file matches `main`; all live browser checks pass; /help, /PROGRESS.html and /_templates/ are 404. Reveal design: yes (checkpoints 1, 5 and 9 Dec).
+- **27 Nov, late:** Salah: "replace 'cut alc' only, leave the junk for now". On the branch, "and alcohol" is removed from the home page's four "cut back on junk food and alcohol" phrases (two visible lines, the meta description and the social description). Waiting for his look before it goes live.
 - **Next:** the plain version as Marketing's copy, Legal's notice and Support's help page arrive (target 29 Nov); the deploy workflow and the reveal's empty scaffolding (no screens, no story) until the repository is private (30 Nov).
