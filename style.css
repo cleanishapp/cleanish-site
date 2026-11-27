@@ -1,54 +1,54 @@
 @font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url('/fonts/inter-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
 @font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url('/fonts/inter-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
-/* Clean(ish) site: one column, the app's colours and type. Inter is one variable font (weights 100-900), latin and latin-ext subsets. */
+/* Clean(ish) site. Colours, type and look follow the Brand book (Marketing doc, v1, 27 Nov):
+   white or black backgrounds, ink buttons, berry as the accent, secondary pink only for big areas
+   with ink on top, hairline borders and no shadows. Inter is one variable font (weights 100-900). */
 :root{
-  --bg:#FAFAF7; --surface:#FFFFFF; --surface-2:#F3EDF0; --ink:#151515; --muted:#5F5A5D; --line:#E7DFE3;
-  --leaf:#B05A7A; --on-leaf:#FFFFFF; --leaf-soft:#F6E3EA; --food:#B05A7A; --food-soft:#F6E3EA; --drink:#A0640E; --drink-soft:#F5E5C6;
-  --f-display:"Inter",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
-  --f-body:"Inter",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  --bg:#FFFFFF; --ink:#151515; --muted:#67626A; --line:#E9E6E8;
+  --berry:#B05A7A; --pink:#E88DAF; --on-pink:#151515;
+  --panel:#FFFFFF; --panel-line:#E9E6E8;
+  --button:#151515; --on-button:#FFFFFF;
+  --f:"Inter",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  color-scheme:light;
 }
 @media (prefers-color-scheme: dark){:root{
-  --bg:#121012; --surface:#1C181B; --surface-2:#262025; --ink:#F2EEF0; --muted:#A79FA4; --line:#2F292D;
-  --leaf:#D98AA8; --on-leaf:#1A1216; --leaf-soft:#3A2230; --food:#D98AA8; --food-soft:#3A2230; --drink:#E0A54A; --drink-soft:#3A2D17; color-scheme:dark}}
+  --bg:#000000; --ink:#F2EEF0; --muted:#A8A0A5; --line:#262626;
+  --berry:#D98AA8; --panel:#1C1C1E; --panel-line:#D98AA8;
+  --button:#F2EEF0; --on-button:#000000;
+  color-scheme:dark}}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.55}
-a{color:var(--leaf)}
-:focus-visible{outline:2px solid var(--leaf);outline-offset:3px;border-radius:6px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f);font-size:17px;line-height:1.55}
+a{color:var(--berry)}
+:focus-visible{outline:2px solid var(--berry);outline-offset:3px;border-radius:6px}
 .wrap{max-width:720px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
 header.top{padding-block:20px;display:flex;justify-content:space-between;align-items:center}
-.brand{font-family:var(--f-display);font-weight:800;font-size:24px;letter-spacing:0;text-decoration:none;color:var(--ink);white-space:nowrap;line-height:1}
+/* Wordmark: Brand book "The logo" - Inter 800, letter-spacing 0, (ish) 0.02em after CLEAN, ink + berry */
+.brand{font-family:var(--f);font-weight:800;font-size:24px;letter-spacing:0;text-decoration:none;color:var(--ink);white-space:nowrap;line-height:1}
 .brand .c{letter-spacing:0}
-.brand .i{color:var(--food);font-weight:800;margin-left:.02em}
+.brand .i{color:var(--berry);font-weight:800;margin-left:.02em}
 .mark{display:flex;flex-direction:column;align-items:flex-start;gap:18px}
-.appicon{display:block;width:88px;height:88px;border-radius:22.5%;border:1px solid var(--line)}
+/* App icon: Brand book "The app icon" - corners rounded at 22.4% where we show it ourselves */
+.appicon{display:block;width:88px;height:88px;border-radius:22.4%}
 .bigmark{font-size:clamp(46px,13vw,84px);margin:0}
-h1,h2,h3{font-family:var(--f-display);letter-spacing:-.02em;text-wrap:balance;margin:0}
-h1{font-size:clamp(38px,9vw,60px);line-height:1.02;font-weight:800}
-h2{font-size:clamp(24px,5vw,32px);line-height:1.15;font-weight:800}
-h3{font-size:19px;font-weight:700}
+h1,h2,h3{font-family:var(--f);font-weight:700;letter-spacing:-.02em;text-wrap:balance;margin:0}
+h1{font-size:clamp(38px,9vw,60px);line-height:1.04}
+h2{font-size:clamp(24px,5vw,32px);line-height:1.15}
+h3{font-size:19px}
 .hero{padding-block:24px 48px;display:flex;flex-direction:column;gap:18px}
+.hero-home{padding-top:40px}
 .hero .lead{font-size:20px;color:var(--muted);max-width:34ch;margin:0}
-.badge{align-self:flex-start;background:var(--leaf-soft);color:var(--leaf);font-weight:700;font-size:14px;padding:6px 12px;border-radius:999px}
-.signup{background:var(--surface);border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:10px;box-shadow:0 1px 2px rgba(0,0,0,.05),0 10px 30px rgba(0,0,0,.06)}
+.muted{margin:0;color:var(--muted)}
+.badge{align-self:flex-start;background:var(--pink);color:var(--on-pink);font-weight:700;font-size:14px;padding:6px 12px;border-radius:999px}
+.signup{background:var(--panel);border:1px solid var(--panel-line);border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:10px}
 .signup .row{display:flex;gap:8px;flex-wrap:wrap}
 .signup input[type=email]{flex:1 1 220px;min-width:0;height:52px;border-radius:14px;border:1px solid var(--line);background:var(--bg);color:var(--ink);padding:0 16px;font:inherit}
-.signup button{height:52px;border:0;border-radius:14px;background:var(--leaf);color:var(--on-leaf);font:700 16px var(--f-body);padding:0 22px;cursor:pointer}
-.form-error{margin:0;color:var(--drink);font-size:14.5px;font-weight:600}
+.signup button{height:52px;border:0;border-radius:14px;background:var(--button);color:var(--on-button);font:700 16px var(--f);padding:0 22px;cursor:pointer}
+.signup button:disabled{opacity:.6;cursor:default}
+.form-error{margin:0;color:var(--berry);font-size:14.5px;font-weight:600}
 .signup small{color:var(--muted);font-size:13.5px}
 .hidden{position:absolute;left:-9999px}
-.hero-home{padding-top:40px}
-.muted{margin:0;color:var(--muted)}
 section{padding-block:40px;display:flex;flex-direction:column;gap:18px;border-top:1px solid var(--line)}
-.steps{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:s}
-.steps li{counter-increment:s;background:var(--surface);border-radius:18px;padding:18px 18px 18px 64px;position:relative}
-.steps li::before{content:counter(s);position:absolute;left:18px;top:18px;width:32px;height:32px;border-radius:50%;background:var(--leaf);color:var(--on-leaf);display:grid;place-items:center;font:800 16px var(--f-display)}
-.steps p,.feat p{margin:4px 0 0;color:var(--muted);font-size:16px}
-.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-.feat{background:var(--surface);border-radius:18px;padding:18px}
-.feat .tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-.rule{background:var(--surface);border-left:0;border-radius:18px;padding:18px;font-size:18px}
-.rule b{font-family:var(--f-display)}
 footer{border-top:1px solid var(--line);padding-block:28px 40px;color:var(--muted);font-size:14px;display:flex;flex-direction:column;gap:8px}
 footer nav{display:flex;gap:16px;flex-wrap:wrap}
 .legal h2{margin-top:28px;font-size:22px}
@@ -56,14 +56,13 @@ footer nav{display:flex;gap:16px;flex-wrap:wrap}
 .legal p,.legal li{color:var(--ink)}
 .legal table{border-collapse:collapse;width:100%;font-size:15px}
 .legal th,.legal td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
-.legal th{background:var(--surface-2)}
+.legal th{font-weight:700}
 .tablewrap{overflow-x:auto}
 .legal .lead-in{font-size:18px;color:var(--muted);margin:8px 0 0}
 .docmeta{margin:6px 0 0;font-size:14.5px;color:var(--muted)}
 .langs{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14.5px;margin-top:8px}
-.toc{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px 18px;margin:24px 0 8px}
+.toc{background:var(--panel);border:1px solid var(--panel-line);border-radius:18px;padding:16px 18px;margin:24px 0 8px}
 .toc-title{margin:0 0 6px;font-weight:700;font-size:15px;color:var(--muted)}
 .toc ol{margin:0;padding-left:22px;display:grid;gap:6px;font-size:16px}
 .legal h2[id]{scroll-margin-top:16px}
-.note{background:var(--drink-soft);border-radius:14px;padding:12px 14px;font-size:14.5px}
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}

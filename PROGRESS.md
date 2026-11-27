@@ -95,4 +95,11 @@ Decided 23 Nov (Salah; passed on by Thread 0, 23 Nov, 19:55):
   - waitlist.js: the 1.5 s timing trap removed, so fast real people are never dropped; a failed send now shows an error line and never posts twice by itself
 
   24 checks pass. The error line's words ("Sorry, that didn't go through. Please try again.") are a stand-in for Marketing. Waiting on others: privacy text (Legal), wording (Salah) and the help page (Salah).
+- **27 Nov, evening:** rebuilt to the **Brand book** (a tab in the Marketing doc, v1, decided by Salah 27 Nov; link on the Team Sheet):
+  - icon = pink tile #E88DAF with "(ish)" in ink, from the brand book's SVG (`icon.svg`; favicon-32, apple-touch-icon and the social image made from it)
+  - white and black backgrounds; ink buttons; berry for accents and links; secondary pink only for big areas with ink on top (the date badge)
+  - hairline borders and no shadows; dark-mode panels #1C1C1E with a berry line; headings Bold 700
+  - the wordmark was already exact
+
+  This replaces the 23 Nov icon taken from the app's assets/icon.png, which the brand book retires. Build's app icon file doesn't match the brand book yet (told Thread 0). All checks pass; on the branch, waiting for Salah's merge.
 - **Next:** the plain version as Marketing's copy, Legal's notice and Support's help page arrive (target 29 Nov); the deploy workflow and the reveal's empty scaffolding (no screens, no story) until the repository is private (30 Nov).
