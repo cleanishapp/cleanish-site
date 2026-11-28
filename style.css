@@ -28,8 +28,8 @@ header.top{padding-block:20px;display:flex;justify-content:space-between;align-i
 .brand .c{letter-spacing:0}
 .brand .i{color:var(--berry);font-weight:800;margin-left:.02em}
 .mark{display:flex;flex-direction:column;align-items:flex-start;gap:18px}
-/* App icon: Brand book "The app icon" - corners rounded at 22.4% where we show it ourselves */
-.appicon{display:block;width:88px;height:88px;border-radius:22.4%}
+/* App icon: berry tile with white (ish), as before 27 Nov (Salah, 28 Nov: "return"). The Brand book's pink icon is not used on the site. */
+.appicon{width:88px;height:88px;border-radius:22.5%;background:#B05A7A;color:#fff;display:grid;place-items:center;font:800 30px var(--f);letter-spacing:-.04em;box-shadow:0 8px 24px rgba(176,90,122,.25)}
 .bigmark{font-size:clamp(46px,13vw,84px);margin:0}
 h1,h2,h3{font-family:var(--f);font-weight:700;letter-spacing:-.02em;text-wrap:balance;margin:0}
 h1{font-size:clamp(38px,9vw,60px);line-height:1.04}

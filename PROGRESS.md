@@ -110,4 +110,5 @@ Decided 23 Nov (Salah; passed on by Thread 0, 23 Nov, 19:55):
   - Measured first load as cleanish.app would send it: about 252 KB against the 1,000 KB budget.
   - Checked on phone (light, dark, reduce motion) and desktop.
   - The reveal's source is kept outside this repository until it goes private (30 Nov). **If this container is lost before then, it is rebuilt from the published preview.**
+- **28 Nov:** Salah: return the site's icon to the berry tile with white "(ish)" ("yes pls return"). The Brand book's pink icon is no longer used on the site: icon.svg removed; favicon.svg, favicon-32.png, apple-touch-icon.png and og-image.png restored as of 2b68760; everything else in the brand look stays. The Brand book, the reveal preview and Build's #244 now disagree with the site; flagged to Thread 0 for Salah to settle one icon everywhere.
 - **Next:** the plain version as Marketing's copy, Legal's notice and Support's help page arrive (target 29 Nov); the deploy workflow and the reveal's empty scaffolding (no screens, no story) until the repository is private (30 Nov).
